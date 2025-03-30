@@ -13,5 +13,7 @@ startup: "services"
 tempfs: true
 ports:
   9000/tcp: 9000
+  9001/tcp: 9001
 map:
   - share:rw
+command: server /data --console-address ":9001"
