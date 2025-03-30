@@ -16,4 +16,14 @@ ports:
   9001/tcp: 9001
 map:
   - share:rw
-command: server /data --console-address ":9001"
+environment:
+  MINIO_ROOT_USER: "ROOTUSER"
+  MINIO_ROOT_PASSWORD: "CHANGEME123"
+options:
+  console_address: ":9001"
+  data_path: "/data"
+schema:
+  console_address: str
+  data_path: str
+command: >
+  server {{ options.data_path }} --console-address {{ options.console_address }}
