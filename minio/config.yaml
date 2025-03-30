@@ -8,7 +8,6 @@ arch:
   - armhf
   - armv7
   - i386
-image: "minio/minio"
 startup: "services"
 tempfs: true
 ports:
@@ -16,14 +15,3 @@ ports:
   9001/tcp: 9001
 map:
   - share:rw
-environment:
-  MINIO_ROOT_USER: "ROOTUSER"
-  MINIO_ROOT_PASSWORD: "CHANGEME123"
-options:
-  console_address: ":9001"
-  data_path: "/data"
-schema:
-  console_address: str
-  data_path: str
-command: >
-  server {{ options.data_path }} --console-address {{ options.console_address }}
