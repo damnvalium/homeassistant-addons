@@ -1,3 +1,5 @@
 FROM minio/minio:latest
 
-CMD ["server", "/share/raid1/Minio", "--console-address", ":9001"]
+RUN echo "Hello World!"
+
+CMD ["minio", "server", "/share/raid1/Minio", "--console-address", ":9001"]
