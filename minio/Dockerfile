@@ -5,6 +5,6 @@ RUN mv /tmp/bashio/lib /usr/lib/bashio && ln -s /usr/lib/bashio/bashio /usr/bin/
 
 COPY setup.sh /tmp
 RUN chmod +x /tmp/setup.sh
-SHELL [ "/tmp/setup.sh" ]
+RUN source /tmp/setup.sh
 
 CMD ["server", "/share/raid1/MinIO", "--console-address", ":9001"]
