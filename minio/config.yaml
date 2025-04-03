@@ -1,6 +1,6 @@
 name: "MinIO"
 slug: "minio"
-version: "0.0.6"
+version: "0.0.7"
 description: "S3-compatible object storage addon"
 arch:
   - amd64
@@ -9,8 +9,18 @@ tempfs: true
 ports:
   9000/tcp: 9000
   9001/tcp: 9001
+options:
+  root_user: "admin"
+  root_password: "password"
+schema:
+  - name: root_user
+    type: string
+    required: true
+  - name: root_password
+    type: string
+    required: true
 environment:
-  MINIO_ROOT_USER: "admin"
-  MINIO_ROOT_PASSWORD: "password"
+  MINIO_ROOT_USER: "{root_user}"
+  MINIO_ROOT_PASSWORD: "{root_password}"
 map:
   - share:rw
