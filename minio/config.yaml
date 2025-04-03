@@ -9,5 +9,8 @@ tempfs: true
 ports:
   9000/tcp: 9000
   9001/tcp: 9001
+eviroment:
+  MINIO_ROOT_USER: "admin"
+  MINIO_ROOT_PASSWORD: "password"
 map:
   - share:rw
