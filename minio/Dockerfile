@@ -1,3 +1,3 @@
 FROM minio/minio:latest
 
-CMD ["server", "/data"]
+CMD ["server", "/share/raid1/"]

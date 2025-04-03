@@ -1,6 +1,6 @@
 name: "MinIO"
 slug: "minio"
-version: "0.0.1"
+version: "0.0.2"
 description: "S3-compatible object storage addon"
 arch:
   - amd64
