@@ -3,11 +3,7 @@ slug: "minio"
 version: "latest"
 description: "S3-compatible object storage addon"
 arch:
-  - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 startup: "services"
 tempfs: true
 ports:
